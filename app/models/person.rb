@@ -1,15 +1,19 @@
 class Person < ActiveRecord::Base
 
-	def first_name
-		return self.first_name
+	def name
+		return "#{self.first_name} #{self.last_name}"
 	end
 
-	def last_name
-		return self.last_name
+	# def last_name
+	# 	return self.last_name
+	# end
+
+	def birth_date_string
+		return self.birth_date.to_s
 	end
 
-	def birth_date
-		return self.birth_date
-	end
+	# def 
+
+	# end
 
 end

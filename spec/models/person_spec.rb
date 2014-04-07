@@ -5,25 +5,27 @@ describe Person do
 	subject(:person){Person.create(first_name: "jerry", last_name: "rice", birth_date: '1970-01-01', drinks: 0, img_url: "http://www.biography.com/imported/images/Biography/Images/Profiles/R/Jerry-Rice-40545-1-402.jpg", license: true)}
 	subject(:person2){Person.create(first_name: "cherry", last_name: "soda", birth_date: '1995-01-01', drinks: 0, img_url: "http://www.biography.com/imported/images/Biography/Images/Profiles/R/Jerry-Rice-40545-1-402.jpg", license: true)}
 
-	describe "#first_name" do
-		it 'should have a first name' do
-			expect(person.first_name).to eq "jerry"
+
+
+	describe "#name" do
+		it 'should have a full name' do
+			expect(person.name).to eq "jerry rice"
 		end
 	end
 
-	describe "#last_name" do
-		it 'should have a last name' do
-			expect(person.last_name).to eq "rice"
-		end
-	end
+	# describe "#last_name" do
+	# 	it 'should have a last name' do
+	# 		expect(person.last_name).to eq "rice"
+	# 	end
+	# end
 
-	describe "#birth_date" do
+	describe "#birth_date_string" do
 		it 'should have a birthday' do
-			expect(person.birth_date).to eq '1970-01-01'
+			expect(person.birth_date.to_s).to eq '1970-01-01'
 		end
 	end
 
-	
+	# describe ""
 end
 
 
