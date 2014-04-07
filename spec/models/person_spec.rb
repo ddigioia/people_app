@@ -17,6 +17,12 @@ describe Person do
 		end
 	end
 
+	describe "#birth_date" do
+		it 'should have a birthday' do
+			expect(person.birth_date).to eq '1970-01-01'
+		end
+	end
+
 	
 end
 

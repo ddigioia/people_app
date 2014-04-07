@@ -8,8 +8,8 @@ class Person < ActiveRecord::Base
 		return self.last_name
 	end
 
-	# def birth_date
-	# 	return self.birth_date
-	# end
+	def birth_date
+		return self.birth_date
+	end
 
 end
