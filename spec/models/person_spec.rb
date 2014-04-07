@@ -9,7 +9,7 @@ describe Person do
 
 	describe "#name" do
 		it 'should have a full name' do
-			expect(person.name).to eq "jerry rice"
+			expect(person.name).to eq("jerry rice")
 		end
 	end
 
@@ -20,12 +20,47 @@ describe Person do
 	# end
 
 	describe "#birth_date_string" do
-		it 'should have a birthday' do
-			expect(person.birth_date.to_s).to eq '1970-01-01'
+		it "should have a birthday" do
+			expect(person.birth_date.to_s).to eq('1970-01-01')
 		end
 	end
 
-	# describe ""
+	describe "#have_a_drink" do
+		it "should add a drink to persons drinks attribute if they are over 21" do
+			person.have_a_drink
+			expect(person.drinks).to eq(1)
+		end
+
+		it "should return the string 'Wait a few years' if person is under 21" do
+			expect(person2.have_a_drink).to eq("Wait a few years")
+		end
+
+		it "should return the string 'Go home you're drunk' if they have more than 3 drinks" do
+			# 3.times.(person.have_a_drink)
+			person.have_a_drink
+			person.have_a_drink
+			person.have_a_drink
+			expect(person.have_a_drink).to eq("Go home you're drunk")
+		end
+
+	end
+
+	# describe "#drive_a_car" do
+	# 	it "should prevent anyone under 18 from driving" do
+	# 		expect(person2.drive_a_car).to eq("Not yet youngin")
+	# 	end
+
+	# 	it "should allow anyone 18 years or older to drive" do
+	# 		expect(person.drive_a_car).to eq(true)
+	# 	end
+
+	# 	it "should prevent any eligible driver whose is drunk from driving" do
+	# 		person.have_a_drink
+	# 		person.have_a_drink
+	# 		person.have_a_drink
+	# 		person.have_a_drink
+	# 	end
+	# end
 end
 
 
