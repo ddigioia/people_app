@@ -34,4 +34,18 @@ class Person < ActiveRecord::Base
 
 	end
 
+	def drive_a_car
+		age = Date.today.year - self.birth_date.year
+
+		if age < 18 
+			return "Not yet youngin"
+		elsif age >= 18 && self.license == true && self.drinks >= 3
+			return "Looks like a cab for you tonight"
+		elsif age >= 18 && self.license == true
+			return true
+		end
+	end
+				
+
+
 end
