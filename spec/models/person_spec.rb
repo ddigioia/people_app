@@ -61,6 +61,17 @@ describe Person do
 			expect(person.drive_a_car).to eq("Looks like a cab for you tonight")
 		end
 	end
+
+	describe "#sober_up" do
+		it "should decrease drinks by 1 if there are any" do
+			person.have_a_drink
+			expect(person.sober_up).to eq(0)
+		end
+
+		it "should do nothing if there are no drinks" do
+			expect(person.sober_up).to eq(true)
+		end
+	end
 end
 
 

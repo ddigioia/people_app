@@ -45,6 +45,14 @@ class Person < ActiveRecord::Base
 			return true
 		end
 	end
+
+	def sober_up
+		if self.drinks > 0
+			self.drinks -=1
+		else
+			return true
+		end
+	end
 				
 
 
