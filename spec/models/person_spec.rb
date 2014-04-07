@@ -6,11 +6,18 @@ describe Person do
 	subject(:person2){Person.create(first_name: "cherry", last_name: "soda", birth_date: '1995-01-01', drinks: 0, img_url: "http://www.biography.com/imported/images/Biography/Images/Profiles/R/Jerry-Rice-40545-1-402.jpg", license: true)}
 
 	describe "#first_name" do
-		it 'should have a first_name' do
+		it 'should have a first name' do
 			expect(person.first_name).to eq "jerry"
 		end
 	end
 
+	describe "#last_name" do
+		it 'should have a last name' do
+			expect(person.last_name).to eq "rice"
+		end
+	end
+
+	
 end
 
 
